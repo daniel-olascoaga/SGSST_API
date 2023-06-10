@@ -5,12 +5,12 @@ from .serializers import RiskSerializer, WorkerSerializer, CompanySerializer
 # Create your views here.
 class RiskViewSet(viewsets.ModelViewSet):
   queryset = Risk.objects.all()
-  serializers_class = RiskSerializer
+  serializer_class = RiskSerializer
 
 class WorkerViewSet(viewsets.ModelViewSet):
   queryset = Worker.objects.all()
-  serializers_class = WorkerSerializer
+  serializer_class = WorkerSerializer
 
 class CompanyViewset(viewsets.ModelViewSet):
   queryset = Company.objects.all()
-  serializers_class = CompanySerializer
+  serializer_class = CompanySerializer

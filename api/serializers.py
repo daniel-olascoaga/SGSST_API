@@ -4,7 +4,7 @@ from .models import Risk, Worker, Company
 class RiskSerializer(serializers.ModelSerializer):
   class Meta:
     model = Risk
-    fields = ['id', 'enviroment', 'levelRisk', 'probability', 'gravity', 'description', 'actions']
+    fields = ['id', 'environment', 'levelRisk', 'probablity', 'gravity', 'description', 'actions']
 
 class WorkerSerializer(serializers.ModelSerializer):
   risks = serializers.SerializerMethodField()
@@ -22,4 +22,4 @@ class CompanySerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Company
-    fields = ['id', 'nit', 'name', 'email', 'phone', 'address', 'password', 'risks', 'created_at'] 
+    fields = ['id', 'nit', 'name', 'email', 'phone', 'address', 'password', 'workers', 'created_at'] 
