@@ -5,7 +5,7 @@ class RiskSerializer(serializers.ModelSerializer):
   class Meta:
     model = Risk
     fields = ['id', 'environment', 'levelRisk', 'probablity', 'gravity', 'description', 'actions']
-
+    
 class WorkerSerializer(serializers.ModelSerializer):
   risks = serializers.SerializerMethodField()
 
